@@ -747,7 +747,7 @@ class Video_Element extends Base {
                 'loop'              => ( 'yes' === $settings['repeatvideo'] ),
                 'showControls'      => ( 'yes' === $settings['controlerbutton'] ),
                 'showYTLogo'        => ( 'yes' === $settings['videosourselogo'] ),
-                'startAt'           => $settings['videostarttime'],
+                'startAt'           => (int) esc_attr($settings['videostarttime']),
                 'containment'       => 'self',
                 'opacity'           => 1,
                 'optimizeDisplay'   => true,
@@ -756,7 +756,7 @@ class Video_Element extends Base {
         }
 
         $videocontainer = [
-            'videocontainer' => isset( $settings['videocontainer'] ) ? $settings['videocontainer'] : '',
+            'videocontainer' => isset( $settings['videocontainer'] ) ? esc_attr($settings['videocontainer']) : '',
         ];
         $this->add_render_attribute( 'area_attr', 'data-videotype', wp_json_encode( $videocontainer ) );
 

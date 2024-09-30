@@ -5,7 +5,7 @@
  * Plugin URI:  https://demo.moveaddons.com
  * Author:      moveaddons
  * Author URI:  https://moveaddons.com
- * Version:     1.3.4
+ * Version:     1.3.5
  * License:     GPL2
  * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: moveaddons
@@ -16,7 +16,7 @@
 
 if( ! defined( 'ABSPATH' ) ) exit(); // Exit if accessed directly
 
-define( 'MOVE_ADDONS_VERSION', '1.3.4' );
+define( 'MOVE_ADDONS_VERSION', '1.3.5' );
 define( 'MOVE_ADDONS_FILE', __FILE__ );
 define( 'MOVE_ADDONS_PL_PATH', plugin_dir_path( MOVE_ADDONS_FILE ) );
 define( 'MOVE_ADDONS_DIR_URL', plugin_dir_url( MOVE_ADDONS_FILE ) );

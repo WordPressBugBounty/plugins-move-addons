@@ -3,7 +3,7 @@ Contributors: moveaddons
 Tags: Elementor, Elementor Addons, Elementor Widgets, elementor page builder, Elementor Blocks
 Requires at least: 5.0
 Tested up to: 6.6
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -215,6 +215,9 @@ More ready templates are coming...
 [Check the full list](https://moveaddons.com/template-library/) of our template library. 
 
 == Changelog ==
+
+= Version: 1.3.5 - Date: 2024-09-26 =
+* Fixed: Escaping issues have been resolved in video widget.
 
 = Version: 1.3.4 - Date: 2024-09-11 =
 * Fixed: Escaping issues have been resolved in event calendar widget.
