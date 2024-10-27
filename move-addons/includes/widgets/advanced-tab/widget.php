@@ -608,7 +608,11 @@ class Advanced_Tab_Element extends Base {
                     echo '</div>';
                 }else{
                     if( !empty( $tab['template_id'] ) ){
-                        echo move_addons_get_elementor()->frontend->get_builder_content_for_display( $tab['template_id'] );
+                        if(!in_array(get_post_status($tab['template_id']), ['pending', 'private', 'draft'])) {
+                            echo move_addons_get_elementor()->frontend->get_builder_content_for_display( $tab['template_id'] );
+                        } else {
+                            echo '<p>'.esc_html__('The post is not published yet. Make sure to publish it to view the content.', 'moveaddons').'</p>'; 
+                        }
                     }
                 }
             ?>

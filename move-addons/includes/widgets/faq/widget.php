@@ -932,7 +932,11 @@ class Faq_Element extends Base {
                                         if ( $accordion['content_source'] == 'custom' && !empty( $accordion['content'] ) ) {
                                             echo wp_kses_post( $accordion['content'] );
                                         } elseif ( $accordion['content_source'] == "elementor" && !empty( $accordion['template_id'] )) {
-                                            echo move_addons_get_elementor()->frontend->get_builder_content_for_display( $accordion['template_id'] );
+                                            if(!in_array(get_post_status($accordion['template_id']), ['pending', 'private', 'draft'])) {
+                                                echo move_addons_get_elementor()->frontend->get_builder_content_for_display( $accordion['template_id'] );
+                                            } else {
+                                                echo '<p>'.esc_html__('The post is not published yet. Make sure to publish it to view the content.', 'moveaddons').'</p>'; 
+                                            }
                                         }
                                     ?>
                                     </div>

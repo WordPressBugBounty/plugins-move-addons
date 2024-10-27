@@ -55,7 +55,11 @@ class Remote_Template_Element extends Base {
             <div <?php echo $this->get_render_attribute_string( 'area_attr' ); ?> >
                 <?php
                     if( !empty( $settings['template_id'] ) ){
-                        echo move_addons_get_elementor()->frontend->get_builder_content_for_display( $settings['template_id'] );
+                        if(!in_array(get_post_status($settings['template_id']), ['pending', 'private', 'draft'])) {
+                            echo move_addons_get_elementor()->frontend->get_builder_content_for_display( $settings['template_id'] );
+                        } else {
+                            echo '<p>'.esc_html__('The post is not published yet. Make sure to publish it to view the content.', 'moveaddons').'</p>'; 
+                        }
                     }else{
                         echo '<p>'.esc_html__( 'Please Select template.', 'moveaddons' ).'</p>';
                     }
