@@ -5,18 +5,18 @@
  * Plugin URI:  https://demo.moveaddons.com
  * Author:      moveaddons
  * Author URI:  https://moveaddons.com
- * Version:     1.3.6
+ * Version:     1.3.7
  * License:     GPL2
  * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: moveaddons
  * Domain Path: /languages
- * Elementor tested up to: 3.24.0
- * Elementor Pro tested up to: 3.24.0
+ * Elementor tested up to: 3.25.10
+ * Elementor Pro tested up to: 3.25.10
 */
 
 if( ! defined( 'ABSPATH' ) ) exit(); // Exit if accessed directly
 
-define( 'MOVE_ADDONS_VERSION', '1.3.6' );
+define( 'MOVE_ADDONS_VERSION', '1.3.7' );
 define( 'MOVE_ADDONS_FILE', __FILE__ );
 define( 'MOVE_ADDONS_PL_PATH', plugin_dir_path( MOVE_ADDONS_FILE ) );
 define( 'MOVE_ADDONS_DIR_URL', plugin_dir_url( MOVE_ADDONS_FILE ) );

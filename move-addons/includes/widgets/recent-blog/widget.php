@@ -1595,7 +1595,7 @@ class Recent_Blog_Element extends Base {
                             echo '<div class="htmove-pagination-style-'.esc_attr($settings['navigation_style']).' htmove-pagination-'.esc_attr($id).' '.( $settings['slider_dots_on_hover'] === 'yes' ? 'htmove-onhover': '' ).'"><div class="swiper-pagination"></div></div>';
                         }
                         if( $settings['slider_arrow'] === 'yes' ){
-                            echo '<div class="htmove-navigation-style-'.$settings['navigation_style'].' htmove-navigation-'.esc_attr($id).' '.( $settings['slider_arrow_on_hover'] === 'yes' ? 'htmove-onhover': '' ).'"><div class="swiper-button-next">'.$nexticon.'</div><div class="swiper-button-prev">'.$previcon.'</div></div>';
+                            echo '<div class="htmove-navigation-style-'.esc_attr($settings['navigation_style']).' htmove-navigation-'.esc_attr($id).' '.( $settings['slider_arrow_on_hover'] === 'yes' ? 'htmove-onhover': '' ).'"><div class="swiper-button-next">'.$nexticon.'</div><div class="swiper-button-prev">'.$previcon.'</div></div>';
                         }
                     }
                 ?>
